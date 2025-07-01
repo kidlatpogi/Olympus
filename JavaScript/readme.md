@@ -12,7 +12,7 @@ This folder contains all of my JavaScript-related practice, projects, and certif
 | Folder     | Focus                               | Languages Used           |
 |------------|--------------------------------------|---------------------------|
 | `WebDev/`  | Layouts, structure, and visual design | **HTML** + **CSS** only   |
-| `JS/`      | Functionality, interactivity, and logic | **HTML** + **CSS** + **JavaScript** |
+| `JavaScript/`      | Functionality, interactivity, and logic | **HTML** + **CSS** + **JavaScript** |
 
 If you're looking for pure layout/design work and early front-end foundations, head to the [`WebDev/`](https://github.com/kidlatpogi/Olympus/tree/main/WebDev) folder.  
 If you're looking for interactive projects and scripting, you're in the right place.
