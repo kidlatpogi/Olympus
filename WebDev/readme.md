@@ -2,6 +2,9 @@
 
 Welcome to my **WebDev** folder — the central hub for all my front-end development work. Here you'll find a mix of practice, projects, and experiments as I sharpen my skills and build real-world web interfaces.
 
+> 🧾 This folder focuses on **HTML** and **CSS** only.  
+> If you're looking for JavaScript projects or logic-focused builds, check out the `JavaScript/` folder in my [Olympus Repository](https://github.com/kidlatpogi/Olympus).
+
 ---
 
 ## 📁 Folder Structure
