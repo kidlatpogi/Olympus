@@ -1,52 +1,41 @@
-# 🧠 FreeCodeCamp Web Development
+# 🌐 Web Development Vault
 
-This folder contains my journey through FreeCodeCamp's **Responsive Web Design Certification**.  
-I've organized it into two main parts:
-
----
-
-## 📂 Folder Structure
-
-| Folder         | Description                                                                 |
-|----------------|-----------------------------------------------------------------------------|
-| `Practice/`    | Exercises and practice files I created while following each lesson/module. |
-| `Project/`     | Final projects built by following FreeCodeCamp's instructions & challenges. |
+Welcome to my **WebDev** folder — the central hub for all my front-end development work. Here you'll find a mix of practice, projects, and experiments as I sharpen my skills and build real-world web interfaces.
 
 ---
 
-## 🏅 Certification
+## 📁 Folder Structure
 
-<table style="border: none; border-collapse: collapse;" cellspacing="0" cellpadding="10">
-  <tr>
-    <td align="center" style="border: none;">
-      <img src="https://github.com/kidlatpogi/kidlatpogi/blob/main/assets/certifications/responsive-web-design-certificate.png?raw=true" 
-           alt="Responsive Web Design Certificate" width="400" />
-      <br/>
-      <sub><strong>Responsive Web Design Certificate</strong></sub>
-    </td>
-  </tr>
-</table>
+| Folder                             | Description                                                                 |
+|------------------------------------|-----------------------------------------------------------------------------|
+| [`FreeCodeCamp/`](./FreeCodeCamp) | Practice files and project submissions created while completing the Responsive Web Design Certification from FreeCodeCamp. If you're looking for my certification and coursework, check this folder. |
+| [`Side-Quests/`](./Side-Quests)   | Smaller, focused practice projects — often done out of curiosity or to explore specific layouts, components, or features. |
+| [`Main-Quests/`](./Main-Quests)   | Larger, full-scale web development projects that showcase complete UI/UX structures, responsive behavior, and practical application of concepts. These are meant to resemble production-level builds. |
 
 ---
 
-## 📌 What I Learned
+## 🧠 Tech Stack So Far
 
-- Semantic HTML structure
-- Responsive layouts using CSS Flexbox & Grid
-- Accessibility best practices
-- Media queries for mobile-first design
-- How to build a full portfolio website from scratch
-
----
-
-## 🚀 Next Steps
-
-I’ll continue building on this foundation by:
-- Practicing more real-world UI challenges
-- Converting designs into responsive layouts
-- Starting JavaScript and Front-End Libraries track
+- **HTML5** (Semantic structure, accessibility)
+- **CSS3** (Flexbox, Grid, animations, media queries)
+- **Responsive Design** principles
+- **UI Design** fundamentals
 
 ---
 
-Thanks for checking this out!  
-This folder is part of my [Olympus Repository](https://github.com/kidlatpogi/Olympus), where I document all of my coding growth.
+## 🚀 Ongoing Goals
+
+- Recreate real websites from scratch for UI/UX practice
+- Build more responsive, mobile-first layouts
+- Start JavaScript integration in upcoming projects
+- Move toward component-based design with frameworks
+
+---
+
+> Want to see my FreeCodeCamp progress, certification, and projects?  
+> ➡️ Jump into [`FreeCodeCamp/`](./FreeCodeCamp)
+
+---
+
+Thanks for checking out my web dev work!  
+This folder is part of the larger [`Olympus`](https://github.com/kidlatpogi/Olympus) repo — where I document my entire coding journey.
