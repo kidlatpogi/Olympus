@@ -8,9 +8,9 @@ This folder contains all of my JavaScript-related practice, projects, and certif
 
 | Folder                             | Description                                                                 |
 |------------------------------------|-----------------------------------------------------------------------------|
-| [`FreeCodeCamp/`](./FreeCodeCamp) | My journey through the **JavaScript Algorithms and Data Structures Certification** from FreeCodeCamp. Includes lesson-based practice and certification projects. |
-| `Practice/`                        | My own independent practice and exercises — covering JS fundamentals, syntax, problem-solving, and logic-building. |
-| `Projects/`                        | Standalone JavaScript mini-projects and experiments — calculators, interactive components, small games, etc. |
+| [`FreeCodeCamp/`](./FreeCodeCamp) | Practice files and project submissions created while completing the Responsive Web Design Certification from FreeCodeCamp. If you're looking for my certification and coursework, check this folder. |
+| [`Side-Quests/`](./Side-Quests)   | Smaller, focused practice projects — often done out of curiosity or to explore specific layouts, components, or features. |
+| [`Main-Quests/`](./Main-Quests)   | Larger, full-scale web development projects that showcase complete UI/UX structures, responsive behavior, and practical application of concepts. These are meant to resemble production-level builds. |
 
 ---
 
