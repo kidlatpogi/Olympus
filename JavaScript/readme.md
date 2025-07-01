@@ -2,15 +2,30 @@
 
 This folder contains all of my JavaScript-related practice, projects, and certification progress. It's where I explore the language that powers dynamic web behavior — from basic logic to real-world applications.
 
+> 🧾 This folder includes **HTML**, **CSS**, and **JavaScript**.  
+> While the structure and styling are still important, the focus here is on building interactive and functional websites with JavaScript.
+
+---
+
+## 🆚 Difference from `WebDev/`
+
+| Folder     | Focus                               | Languages Used           |
+|------------|--------------------------------------|---------------------------|
+| `WebDev/`  | Layouts, structure, and visual design | **HTML** + **CSS** only   |
+| `JS/`      | Functionality, interactivity, and logic | **HTML** + **CSS** + **JavaScript** |
+
+If you're looking for pure layout/design work and early front-end foundations, head to the [`WebDev/`](https://github.com/kidlatpogi/Olympus/tree/main/WebDev) folder.  
+If you're looking for interactive projects and scripting, you're in the right place.
+
 ---
 
 ## 📁 Folder Structure
 
 | Folder                             | Description                                                                 |
 |------------------------------------|-----------------------------------------------------------------------------|
-| [`FreeCodeCamp/`](./FreeCodeCamp) | Practice files and project submissions created while completing the Responsive Web Design Certification from FreeCodeCamp. If you're looking for my certification and coursework, check this folder. |
-| [`Side-Quests/`](./Side-Quests)   | Smaller, focused practice projects — often done out of curiosity or to explore specific layouts, components, or features. |
-| [`Main-Quests/`](./Main-Quests)   | Larger, full-scale web development projects that showcase complete UI/UX structures, responsive behavior, and practical application of concepts. These are meant to resemble production-level builds. |
+| [`FreeCodeCamp/`](./FreeCodeCamp) | Practice files and project submissions created while completing the JavaScript Algorithms and Data Structures Certification from FreeCodeCamp (in progress). |
+| [`Side-Quests/`](./Side-Quests)   | Smaller, focused practice projects — often done out of curiosity or to explore specific logic, functions, or effects. |
+| [`Main-Quests/`](./Main-Quests)   | Larger, full-scale web development projects that showcase complete UI/UX behavior, interactive features, and real application logic. |
 
 ---
 
