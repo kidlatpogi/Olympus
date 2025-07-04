@@ -1,6 +1,6 @@
 # 🧠 Palindrome Checker
 
-![Screenshot](Palindrome%20Checker/PalindromeChecker.png)
+![Screenshot](PalindromeChecker.png)
 
 ## 📘 Overview
 
