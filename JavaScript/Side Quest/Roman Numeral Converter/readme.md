@@ -6,13 +6,12 @@
 ---
 
 ## 📘 Overview  
-This is a clean and functional **Roman Numeral Converter** web app that converts numbers between Roman numerals and standard integers. It's inspired by a classic JavaScript project and enhanced with a modern design and clear code comments to help with learning and reference.
+This is a clean and functional **Roman Numeral Converter** web app that converts integers into Roman numerals. It's inspired by a classic JavaScript project and enhanced with a modern design and clear code comments to help with learning and reference.
 
 ---
 
 ## 🚀 Features  
-- Converts **integers to Roman numerals** (e.g., `42` ➜ `XLII`)  
-- Converts **Roman numerals to integers** (e.g., `XLII` ➜ `42`)  
+- Converts **integers to Roman numerals** (e.g., `42` ➜ `XLII`) 
 - Validates user input and handles edge cases  
 - Real-time conversion on button click or Enter key  
 - Minimalist and responsive UI  
@@ -21,7 +20,7 @@ This is a clean and functional **Roman Numeral Converter** web app that converts
 ---
 
 ## 💻 How to Use  
-1. Type a number (1–3999) or a Roman numeral in the input field.  
+1. Type a number (1–3999) in the input field.  
 2. Click the **"Convert"** button or press **Enter**.  
 3. The converted value will appear instantly below the input.  
 
@@ -38,8 +37,7 @@ This is a clean and functional **Roman Numeral Converter** web app that converts
 - Add **copy-to-clipboard** functionality for results  
 - Improve input validation and feedback  
 - Add **dark mode** toggle  
-- Animate the result display  
-- Expand support to handle lowercase Roman input  
+- Animate the result display   
 
 ---
 
