@@ -95,6 +95,45 @@ header {
     margin-top: 20px;
 }
 
+footer {
+    margin-top: auto;
+    font-size: 1rem;
+    color: var(--imperial-purple);
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.github-icon {
+    transition: transform 0.3s ease, fill 0.3s ease;
+    fill: var(--imperial-purple);
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.1);
+    fill: var(--gold);
+}
+
+@keyframes gentlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.github-icon {
+    animation: gentlePulse 4s infinite;
+}
+
 @media screen and (max-width: 600px) {
     #check-btn {
         margin-top: 10px;
