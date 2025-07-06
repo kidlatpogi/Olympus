@@ -1,0 +1,303 @@
+:root {
+            --gold: #d4af37;
+            --dark-gold: #a57340;
+            --marble: #f0e6d2;
+            --dark-marble: #e0d6c2;
+            --bronze: #cd7f32;
+            --imperial-purple: #5d2e46;
+            --shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Forum', 'Cinzel', serif;
+            color: var(--imperial-purple);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(230, 211, 167, 0.9) 0%, 
+                    rgba(180, 150, 110, 0.9) 100%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(120,90,60,0.2)" stroke-width="2"/></svg>');
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 12px double var(--dark-gold);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--bronze), transparent);
+            margin: 1rem auto;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--imperial-purple);
+            text-shadow: var(--shadow);
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::before, h1::after {
+            content: "❖";
+            color: var(--gold);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+
+        h1::before {
+            left: -2rem;
+        }
+
+        h1::after {
+            right: -2rem;
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .converter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        input {
+            font-family: 'Forum', serif;
+            font-size: 1.5rem;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--dark-gold);
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 10px var(--gold);
+            transform: scale(1.02);
+        }
+
+        button {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(to bottom, var(--gold), var(--dark-gold));
+            color: var(--imperial-purple);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        button:hover::after {
+            opacity: 1;
+        }
+
+        #output {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--imperial-purple);
+            min-height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            border: 1px dashed var(--dark-gold);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        #output::before {
+            content: "↴";
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #output.show::before {
+            opacity: 1;
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 1rem;
+            color: var(--imperial-purple);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        a {
+            color: var(--imperial-purple);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        a:hover {
+            color: var(--gold);
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--gold);
+            transition: width 0.3s;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h1::before, h1::after {
+                font-size: 1rem;
+            }
+
+            h1::before {
+                left: -1.5rem;
+            }
+
+            h1::after {
+                right: -1.5rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            input {
+                font-size: 1.2rem;
+                padding: 0.6rem;
+            }
+
+            button {
+                font-size: 1.1rem;
+                padding: 0.7rem 1.5rem;
+            }
+
+            #output {
+                font-size: 2rem;
+            }
+        }
+
+        /* Roman column decorations */
+        .column-decoration {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100"><path d="M25,0 C35,0 45,10 45,20 L45,80 C45,90 35,100 25,100 C15,100 5,90 5,80 L5,20 C5,10 15,0 25,0 Z" fill="none" stroke="%23a57340" stroke-width="2"/><path d="M25,10 C32,10 38,16 38,23 L38,77 C38,84 32,90 25,90 C18,90 12,84 12,77 L12,23 C12,16 18,10 25,10 Z" fill="none" stroke="%23a57340" stroke-width="1"/></svg>');
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .column-left {
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .column-right {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
