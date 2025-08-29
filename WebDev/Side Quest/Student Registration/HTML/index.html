@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <title>Student Registration</title>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="floating-shapes">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <div class="card registration-card">
+                    <div class="card-header">
+                        <h2><i class="bi bi-person-plus-fill me-2"></i>Student Registration Portal</h2>
+                        <p class="mb-0">Join our learning community today</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="../PHP/register.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 animated-border">
+                                    <label for="fname" class="form-label">
+                                        <i class="bi bi-person"></i><span class="required-field">First Name</span>
+                                    </label>
+                                    <div class="floating-label">
+                                        <input type="text" class="form-control" id="fname" name="fname" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 animated-border">
+                                    <label for="mname" class="form-label">
+                                        <i class="bi bi-person"></i><span>Middle Name</span>
+                                    </label>
+                                    <div class="floating-label">
+                                        <input type="text" class="form-control" id="mname" name="mname" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 animated-border">
+                                    <label for="lname" class="form-label">
+                                        <i class="bi bi-person"></i><span class="required-field">Last Name</span>
+                                    </label>
+                                    <div class="floating-label">
+                                        <input type="text" class="form-control" id="lname" name="lname" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 animated-border">
+                                <label for="birthdate" class="form-label">
+                                    <i class="bi bi-calendar-event"></i><span class="required-field">Birthdate</span>
+                                </label>
+                                <div class="floating-label">
+                                    <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 animated-border">
+                                <label for="section" class="form-label">
+                                    <i class="bi bi-layers"></i><span class="required-field">Select Your Section</span>
+                                </label>
+                                <div class="floating-label">
+                                    <select class="form-select" id="section" name="section" required>
+                                        <option value="" disabled selected>Choose a section</option>
+                                        <option value="INF231">INF231</option>
+                                        <option value="INF232">INF232</option>
+                                        <option value="INF233">INF233</option>
+                                        <option value="INF234">INF234</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mt-5">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-check-circle-fill me-2"></i>Complete Registration
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted text-center">
+                        <small>© 2023 Student Registration System. All rights reserved.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    <script>
+        // Add subtle animation to form elements on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const formElements = document.querySelectorAll('.form-control, .form-select, .btn');
+            
+            formElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+            
+            // Add animation to the card
+            const card = document.querySelector('.registration-card');
+            card.style.transform = 'translateY(20px)';
+            card.style.opacity = 0;
+            
+            setTimeout(() => {
+                card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+                card.style.transform = 'translateY(0)';
+                card.style.opacity = 1;
+            }, 100);
+        });
+    </script>
+</body>
+</html>
