@@ -3,6 +3,8 @@ import tkinter as tk
 import random
 import colorsys
 
+import CenterWindow
+
 class ColorChanger:
     def __init__(self, root):
         self.root = root
@@ -60,14 +62,6 @@ root = tk.Tk()
 root.title("Color Changer")
 ColorChanger(root)
 
-# Center the window on the screen
-root.update_idletasks()
-
-# Get the window dimensions
-width = root.winfo_width()
-height = root.winfo_height()
-x = (root.winfo_screenwidth() // 2) - (width // 2)
-y = (root.winfo_screenheight() // 2) - (height // 2)
-root.geometry(f"{width}x{height}+{x}+{y}")
+CenterWindow.center_window(root, 400, 200)
 
 root.mainloop()
