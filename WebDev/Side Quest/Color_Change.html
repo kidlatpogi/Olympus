@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COLOR</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            font-size: 100px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 60vh;
+        }
+
+        button {
+            text-align: center;
+            padding: 50px 200px;
+            margin: 4px 2px;
+            font-size: large;
+            border: 2px solid #0000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Random Color Changer</h1>
+
+    <div class="button-container">
+        <button id="colorButton" type="button">CLICK ME!!!</button>
+    </div>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', changeColor);
+
+        function changeColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
