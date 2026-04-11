@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather API Lab</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 60px auto; }
+    input { padding: 8px; width: 300px; font-size: 16px; }
+    button { padding: 8px 16px; font-size: 16px; cursor: pointer; }
+    #result { margin-top: 20px; padding: 16px; background: #f0f8ff; border-radius: 8px; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Weather Checker</h1>
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <button onclick="getWeather()">Get Weather</button>
+  <div id="result">Enter a city and click Get Weather.</div>
+
+  <script>
+    const API_KEY = "WEARHER API GOES HERE LMAOOOO";
+
+    async function getWeather() {
+      const city = document.getElementById('cityInput').value.trim();
+      const resultDiv = document.getElementById('result');
+
+      if (!city) {
+        resultDiv.innerHTML = '<p class="error">Please enter a city name.</p>';
+        return;
+      }
+
+      try {
+        const url = `https://api.openweathermap.org/data/2.5/weather`
+                   + `?q=${encodeURIComponent(city)}`
+                   + `&appid=${API_KEY}&units=metric`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`API error: ${response.status}`);
+        const data = await response.json();
+
+        resultDiv.innerHTML = `
+          <h2>${data.name}, ${data.sys.country}</h2>
+          <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+          <p><strong>Feels Like:</strong> ${data.main.feels_like}°C</p>
+          <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+          <p><strong>Condition:</strong> ${data.weather[0].description}</p>
+          <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+        `;
+      } catch (err) {
+        resultDiv.innerHTML = `<p class="error">Error: ${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
