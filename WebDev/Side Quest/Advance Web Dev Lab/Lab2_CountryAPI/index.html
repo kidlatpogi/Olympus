@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Country & Currency Explorer</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+    input { padding: 10px; width: 350px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px 20px; font-size: 16px; background: #1F4E79; color: white;
+             border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #2E75B6; }
+    #result { margin-top: 30px; }
+    .card { background: #f0f8ff; border-radius: 8px; padding: 20px; margin-top: 10px; }
+    .flag { font-size: 60px; }
+    .error { color: red; margin-top: 20px; }
+    .label { font-weight: bold; color: #1F4E79; }
+    .section-title { color: #2E75B6; border-bottom: 2px solid #BDD7EE; padding-bottom: 4px; }
+    .borders { background: #e8f4fd; padding: 12px; border-radius: 6px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Country & Currency Explorer</h1>
+  <p>Enter a country name to retrieve country info and live exchange rates.</p>
+  <input type="text" id="countryInput" placeholder="e.g. Philippines, Japan, France" />
+  <button onclick="explore()">Explore</button>
+  <div id="result"></div>
+
+  <script>
+    // USE OPEN EXCHANGE RATES API: https://openexchangerates.org/
+    const OER_APP_ID = 'YOUR API KEY HERE'; // Replace with your actual App ID
+
+    async function explore() {
+      const country = document.getElementById('countryInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<p>Loading...</p>';
+
+      if (!country) {
+        resultDiv.innerHTML = '<p class="error">Please enter a country name.</p>';
+        return;
+      }
+
+      try {
+        // Step 1: Get main country data
+        const countryRes = await fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(country)}`);
+        if (!countryRes.ok) throw new Error('Country not found. Check spelling.');
+        const countryData = await countryRes.json();
+        const c = countryData[0]; // First matching country
+
+        // Step 2: Get exchange rates
+        const ratesRes = await fetch(`https://openexchangerates.org/api/latest.json?app_id=${OER_APP_ID}`);
+        if (!ratesRes.ok) throw new Error('Exchange rate service unavailable.');
+        const ratesData = await ratesRes.json();
+
+        // Step 3: Get border countries (convert codes to names)
+        let bordersHtml = '';
+        if (c.borders && c.borders.length > 0) {
+          // Fetch all border countries at once
+          const bordersPromises = c.borders.map(code => 
+            fetch(`https://restcountries.com/v3.1/alpha/${code}`)
+          );
+          const bordersResponses = await Promise.all(bordersPromises);
+          const borderNames = [];
+          
+          for (const borderRes of bordersResponses) {
+            if (borderRes.ok) {
+              const borderData = await borderRes.json();
+              borderNames.push(borderData[0].name.common);
+            }
+          }
+          
+          bordersHtml = `
+            <div class="borders">
+              <span class="label">Neighboring Countries:</span><br>
+              ${borderNames.join(', ') || 'No data available'}
+            </div>
+          `;
+        } else {
+          bordersHtml = '<div class="borders"><span class="label">Neighboring Countries:</span> None</div>';
+        }
+
+        // Currency info
+        const currencyCode = Object.keys(c.currencies)[0];
+        const currencyInfo = c.currencies[currencyCode];
+        const rate = ratesData.rates[currencyCode];
+
+        resultDiv.innerHTML = `
+          <div class="card">
+            <div class="flag">${c.flag}</div>
+            <h2>${c.name.common} (${c.cca2})</h2>
+            
+            <h3 class="section-title">Country Information</h3>
+            <p><span class="label">Official Name:</span> ${c.name.official}</p>
+            <p><span class="label">Capital:</span> ${c.capital?.[0] ?? 'N/A'}</p>
+            <p><span class="label">Region:</span> ${c.region} — ${c.subregion ?? 'N/A'}</p>
+            <p><span class="label">Population:</span> ${c.population.toLocaleString()}</p>
+            <p><span class="label">Area:</span> ${c.area.toLocaleString()} km²</p>
+            <p><span class="label">Languages:</span> ${Object.values(c.languages ?? {}).join(', ')}</p>
+            
+            ${bordersHtml}
+            
+            <h3 class="section-title">Currency & Exchange Rate</h3>
+            <p><span class="label">Currency:</span> ${currencyInfo.name} (${currencyCode})</p>
+            <p><span class="label">Symbol:</span> ${currencyInfo.symbol}</p>
+            <p><span class="label">Rate vs USD:</span> 1 USD = ${rate ? rate.toFixed(4) : 'N/A'} ${currencyCode}</p>
+          </div>
+        `;
+      } catch (err) {
+        resultDiv.innerHTML = `<p class="error">Error: ${err.message}</p>`;
+      }
+    }
+
+    // Enter key support
+    document.getElementById('countryInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') explore();
+    });
+  </script>
+</body>
+</html>
