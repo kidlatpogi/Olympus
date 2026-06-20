@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your World</title>
+    <link rel="icon" href="https://edube.org/uploads/media/default/0001/04/web-favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Discover Your World &#x30D;</h1>
+        <p>Click the button to learn about the continent you're on, or click directly on the map to explore famous
+            geographical features!</p>
+
+        <button id="getLocation">Discover Location</button>
+
+        <div id="info-panel" class="hidden">
+            <h2 id="continent-title"></h2>
+            <p id="continent-details"></p>
+        </div>
+
+        <div class="map-container">
+            <img src="https://edube.org/uploads/media/default/0001/04/continents.jpg" usemap="#image-map"
+                alt="World Map">
+            <map name="image-map">
+                <area id="north-america" shape="rect" coords="386,283,41,17" alt="North America" title="North America">
+                <area id="south-america" shape="rect" coords="209,501,358,288" alt="South America"
+                    title="South America">
+                <area id="europe" shape="rect" coords="391,68,505,217" alt="Europe" title="Europe">
+                <area id="africa" shape="rect" coords="533,217,387,448" alt="Africa" title="Africa">
+                <area id="asia" shape="rect" coords="893,153,506,1" alt="Asia" title="Asia">
+                <area id="australia-and-oceania" shape="rect" coords="679,353,872,480" alt="Australia and Oceania"
+                    title="Australia and Oceania">
+            </map>
+        </div>
+    </div>
+</body>
+
+</html>
