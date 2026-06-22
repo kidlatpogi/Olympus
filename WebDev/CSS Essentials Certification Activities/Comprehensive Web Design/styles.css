@@ -1,0 +1,315 @@
+/* 
+   Comprehensive Web Design Stylesheet
+   Minimalist and simple theme incorporating requested specifications.
+*/
+
+/* 4. Styling the Body and Header */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+}
+
+/* 3. Styling the Navigation Menu */
+header nav ul.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul.nav-menu li {
+    margin: 10px;
+}
+
+header nav ul.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+header nav ul.nav-menu a:hover,
+header nav ul.nav-menu a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* 5. Creating and Styling the Home Section */
+main.main-content {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main.main-content section {
+    margin: 20px 0;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+#home h1 {
+    color: #0654b3;
+    margin-top: 0;
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+}
+
+main.main-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 6. Creating the Trivia Section */
+.trivia-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+.trivia-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.trivia-image {
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.trivia-details h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+/* 7. Creating and Styling the Categories Section */
+#categories ul.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#categories ul.category-list li {
+    margin: 10px;
+}
+
+#categories ul.category-list a {
+    color: #0654b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#categories ul.category-list a:hover,
+#categories ul.category-list a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* 8. Creating and Styling the Scores Table */
+.scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.scores-table th,
+.scores-table td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+.scores-table th {
+    background-color: #333333;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.scores-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 9. Creating a Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+#contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #333333;
+    box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.1);
+}
+
+#contact-form button.submit-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#contact-form button.submit-btn:hover {
+    background-color: #111111;
+}
+
+/* 10. Adding a Subscription Button */
+.subscribe-btn {
+    padding: 12px 24px;
+    background-color: #333333;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+.subscribe-btn:hover {
+    background-color: #111111;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.4);
+    }
+    70% {
+        transform: scale(1.04);
+        box-shadow: 0 0 0 8px rgba(51, 51, 51, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+}
+
+/* 11. Screen Reader Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Footer style */
+footer {
+    background-color: #333333;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Section h2 headings style */
+main.main-content section h2 {
+    color: #333333;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    header nav ul.nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header nav ul.nav-menu li {
+        margin: 5px 0;
+    }
+    
+    .trivia-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .trivia-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    #categories ul.category-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #categories ul.category-list li {
+        margin: 5px 0;
+    }
+}

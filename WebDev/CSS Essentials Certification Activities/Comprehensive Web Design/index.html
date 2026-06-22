@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Trivia</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <span class="sr-only">World Trivia Header</span>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+                <li><a href="#trivia" aria-label="Go to Trivia section">Trivia</a></li>
+                <li><a href="#categories" aria-label="Go to Categories section">Categories</a></li>
+                <li><a href="#scores" aria-label="Go to Scores section">Scores</a></li>
+                <li><a href="#subscribe" aria-label="Go to Subscribe section">Subscribe</a></li>
+                <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- 5. Home Section -->
+        <section id="home">
+            <h1>Welcome to World Trivia</h1>
+            <p>Uncover fascinating facts and challenge your knowledge of our diverse planet! World Trivia brings you history, geography, science, and cultural wonders from every corner of the globe. Dive in, explore our trivia databases, view top scores, or subscribe to get daily challenges sent straight to your inbox.</p>
+        </section>
+
+        <!-- 6. Trivia Section -->
+        <section id="trivia">
+            <h2>Featured Trivia</h2>
+            
+            <div class="trivia-item">
+                <svg class="trivia-image" width="150" height="150" viewBox="0 0 100 100" aria-label="Vector illustration of the Eiffel Tower" role="img">
+                    <rect width="100%" height="100%" fill="#eeeeee"/>
+                    <path d="M50 15 L46 65 L44 85 L56 85 L54 65 Z" fill="#333333"/>
+                    <path d="M48 65 L40 85 L60 85 L52 65 Z" fill="#222222"/>
+                    <path d="M46 65 L54 65" stroke="#ffffff" stroke-width="2"/>
+                    <circle cx="50" cy="12" r="2" fill="#000000"/>
+                </svg>
+                <div class="trivia-details">
+                    <h3>The Height of the Eiffel Tower</h3>
+                    <p>Did you know the Eiffel Tower can grow taller during the summer? Due to thermal expansion, the iron structure can expand by up to 15 centimeters (6 inches) when the weather gets hot.</p>
+                </div>
+            </div>
+
+            <div class="trivia-item">
+                <svg class="trivia-image" width="150" height="150" viewBox="0 0 100 100" aria-label="Vector illustration of a deep sea octopus" role="img">
+                    <rect width="100%" height="100%" fill="#eeeeee"/>
+                    <circle cx="50" cy="45" r="18" fill="#333333"/>
+                    <path d="M35 50 Q20 70 30 85 Q40 80 42 60" stroke="#333" stroke-width="4" fill="none"/>
+                    <path d="M50 50 Q50 80 50 85" stroke="#333" stroke-width="4" fill="none"/>
+                    <path d="M65 50 Q80 70 70 85 Q60 80 58 60" stroke="#333" stroke-width="4" fill="none"/>
+                    <circle cx="45" cy="42" r="2.5" fill="#ffffff"/>
+                    <circle cx="55" cy="42" r="2.5" fill="#ffffff"/>
+                </svg>
+                <div class="trivia-details">
+                    <h3>Octopus Hearts</h3>
+                    <p>An octopus has three hearts. Two hearts pump blood to the gills, while the third circulates it through the rest of the body. Interestingly, the main circulatory heart stops beating when the octopus swims!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Categories Section -->
+        <section id="categories">
+            <h2>Trivia Categories</h2>
+            <ul class="category-list">
+                <li><a href="#" aria-label="Browse History trivia">History</a></li>
+                <li><a href="#" aria-label="Browse Geography trivia">Geography</a></li>
+                <li><a href="#" aria-label="Browse Science trivia">Science</a></li>
+                <li><a href="#" aria-label="Browse Art and Literature trivia">Art & Lit</a></li>
+            </ul>
+        </section>
+
+        <!-- 8. Scores Section -->
+        <section id="scores">
+            <h2>Leaderboard Top Scores</h2>
+            <div class="table-responsive">
+                <table class="scores-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Country</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Elena Rostova</td>
+                            <td>9,850</td>
+                            <td>Ukraine</td>
+                            <td>History</td>
+                            <td>June 20, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Marcus Aurelius</td>
+                            <td>9,720</td>
+                            <td>Italy</td>
+                            <td>Philosophy</td>
+                            <td>June 18, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Yuki Tanaka</td>
+                            <td>9,550</td>
+                            <td>Japan</td>
+                            <td>Science</td>
+                            <td>June 19, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 10. Subscribe Section -->
+        <section id="subscribe">
+            <h2>Daily Challenge</h2>
+            <p>Receive a fresh puzzle every single day to test your limits. Join our global mailing list today.</p>
+            <button id="btn-subscribe" class="subscribe-btn" aria-label="Subscribe to Puzzle of the Day">Subscribe Now</button>
+        </section>
+
+        <!-- 9. Contact Section -->
+        <section id="contact">
+            <h2>Send Us a Message</h2>
+            <p>Have some interesting trivia facts you would like to share? Contact our editorial team.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" aria-label="Submit Contact Form">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 World Trivia Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
