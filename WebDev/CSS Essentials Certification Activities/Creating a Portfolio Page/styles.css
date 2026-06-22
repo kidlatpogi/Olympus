@@ -1,0 +1,64 @@
+/* 1. Apply Colors */
+h1 {
+    color: rgb(0, 128, 0);
+}
+
+body {
+    background-color: #d3d3d3;
+    font-family: Arial, sans-serif; /* 3. Text Styling */
+}
+
+h2 {
+    color: hsl(240, 100%, 50%);
+    font-style: italic; /* 3. Text Styling */
+    text-decoration: underline; /* 3. Text Styling */
+}
+
+header {
+    background-color: rgb(255, 0, 0); /* Fallback */
+    background-color: device-cmyk(0%, 100%, 100%, 0%);
+    background-image: url("https://edube.org/uploads/media/default/0001/04/portfolio.jpg"); /* 2. Background Properties */
+    background-repeat: no-repeat; /* 2. Background Properties */
+    background-position: center; /* 2. Background Properties */
+}
+
+/* 2. Background Properties */
+main {
+    background-image: linear-gradient(lightblue, white);
+}
+
+/* 3. Text Styling */
+p {
+    font-size: 18px;
+}
+
+/* 4. List Properties */
+ul {
+    list-style-type: square;
+}
+
+li {
+    line-height: 1.6;
+    padding-left: 10px;
+}
+
+/* 5. Hyperlink Properties */
+a {
+    color: darkblue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+/* 6. Image Properties */
+img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
