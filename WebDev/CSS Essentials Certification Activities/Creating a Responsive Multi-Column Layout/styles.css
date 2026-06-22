@@ -1,0 +1,115 @@
+/* 
+   Tech Blog styles.css
+   Simple, minimalist black and white theme.
+*/
+
+/* Global resets and box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 4. Adding Backgrounds (Header) */
+header {
+    background-color: #f4f4f4;
+    color: #333333;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+/* 1. Apply Basic Layout Styles */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+/* 2. Implementing Floats */
+.column {
+    float: left;
+    width: 30%;
+    margin: 1.66%;
+    background-color: #e2e2e2; /* 4. Adding Backgrounds */
+    padding: 24px;
+    border-radius: 4px;
+}
+
+.column h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111111;
+}
+
+.column p {
+    margin-bottom: 0;
+    color: #444444;
+}
+
+/* 3. Clearing Floats */
+.clearfix {
+    clear: both;
+}
+
+/* 6. Creating Grids Using Floats */
+.row {
+    margin-left: -1.66%;
+    margin-right: -1.66%;
+}
+
+/* 7. Practical Example: Text Wrapping Around Images */
+.post .column {
+    float: left;
+    width: 50%;
+    margin: 0 20px 10px 0;
+    background-color: #e2e2e2;
+    text-align: center;
+    font-weight: 600;
+    color: #444444;
+    padding: 60px 20px; /* Large padded area simulating a media block */
+    border: 1px solid #cccccc;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.post p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #333333;
+}
+
+/* 5. Making the Layout Responsive */
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        float: none;
+        margin: 15px 0;
+    }
+    
+    .post .column {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0;
+    }
+}
