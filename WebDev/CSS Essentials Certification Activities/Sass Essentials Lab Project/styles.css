@@ -1,0 +1,103 @@
+body {
+  color: #007bff;
+  font-size: 16px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: rgb(229.5, 241.8, 255);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgb(204, 228.6, 255);
+}
+.header h1 {
+  font-size: 2em;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 40px 10%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about {
+  margin-bottom: 40px;
+}
+.about h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  text-transform: uppercase;
+}
+.about p {
+  font-size: 16px;
+  color: #333333;
+}
+
+.features {
+  margin-bottom: 40px;
+}
+.features h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  text-transform: uppercase;
+}
+.features .feature-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+.features .feature-list li {
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(204, 228.6, 255);
+  color: #111111;
+  font-weight: 500;
+}
+
+.example {
+  margin-bottom: 40px;
+}
+.example h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  text-transform: uppercase;
+}
+.example .example-text {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(204, 228.6, 255);
+  color: #111111;
+}
+
+.footer {
+  background-color: rgb(229.5, 241.8, 255);
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgb(204, 228.6, 255);
+}
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/*# sourceMappingURL=styles.css.map */
